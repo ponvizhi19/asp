@@ -1,0 +1,492 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 Session Management:\par
+Session is a temporary memory where we can store small amount of data for certain period of time.It is a sessionstateBaseObject.\par
+Four ways to store session data:\par
+1. Inproc\par
+2. state server(or) outproc\par
+3.Sql server\par
+4. Custom\par
+\par
+1. Inproc :\par
+Default session mode ,here data gets stored in memory on the web server.\par
+2. state server(or) outproc :\par
+All sessions are stored in separate memory called asp.net service.\par
+3.Sql server :\par
+data is stored in Sql server database .\par
+4. Custom :\par
+we can specify custom storage  option for session.\par
+\par
+To end session :\par
+Session.Clear() method - will remove all keys and values from current session.\par
+Session.Abondon() method - will cancel the current session\par
+\par
+
+\pard\sa200\sl276\slmult1\qc Web.config\par
+
+\pard\sa200\sl276\slmult1\qj web.config file is an XML-based configuration file used in ASP.NET-based applications to manage various settings that are concerned with the configuration of our website. In this way, we can separate our application logic from configuration logic. No need to restart if we want to change some configuration . asp.net automatically detects changes and and applies on running application.\par
+\par
+CLASSES :\par
+AnonymousIdentificationSection\par
+Configures anonymous identification for users that are not authenticated. This class cannot be inherited.\par
+AssemblyCollection\par
+Represents a collection of AssemblyInfo objects. This class cannot be inherited.\par
+AssemblyInfo\par
+References an assembly to be linked to during compilation of a dynamic resource. This class cannot be inherited.\par
+AuthenticationSection\par
+Configures the authentication for a Web application. This class cannot be inherited.\par
+\par
+AuthorizationSection\par
+Configures a Web application authorization. This class cannot be inherited.\par
+\par
+BrowserCapabilitiesCodeGenerator\par
+The BrowserCapabilitiesCodeGenerator class is used internally by the aspnet_regbrowsers tool to parse .browser browser definition files and add browsers to the run-time collection of known browsers contained in the BrowserCapabilitiesFactory object.\par
+\par
+BrowserCapabilitiesFactory\par
+Provides methods used internally by the configuration system to produce request-specific instances of the HttpBrowserCapabilities class that are publicly accessed through the ASP.NET-intrinsic Request.Browser property.\par
+\par
+BrowserCapabilitiesFactoryBase\par
+The BrowserCapabilitiesFactoryBase class is the base class from which BrowserCapabilitiesFactory is derived. It is used internally at run time by the configuration system to create request-specific instances of the HttpCapabilitiesBase class, publicly accessed through the ASP.NET intrinsic Request.Browser property.\par
+\par
+BufferModesCollection\par
+A collection of BufferModeSettings objects. This class cannot be inherited.\par
+\par
+BufferModeSettings\par
+Configures the ASP.NET event-buffering settings for event providers. This class cannot be inherited.\par
+\par
+BuildProvider\par
+Provides functionality to parse a particular file type and generate code during compilation of a dynamic resource. This class cannot be inherited.\par
+\par
+BuildProviderCollection\par
+Represents a collection of BuildProvider objects. This class cannot be inherited.\par
+\par
+CacheSection\par
+Configures the global cache settings for an ASP.NET application. This class cannot be inherited.\par
+\par
+ClientTarget\par
+Defines the alias associated with the target user agent for which ASP.NET server controls should render content. This class cannot be inherited.\par
+\par
+ClientTargetCollection\par
+Represents a collection of ClientTarget objects. This class cannot be inherited.\par
+\par
+ClientTargetSection\par
+Configures the clientTarget section. This class cannot be inherited.\par
+\par
+CodeSubDirectoriesCollection\par
+Represents a collection of CodeSubDirectory objects. This class cannot be inherited.\par
+\par
+CodeSubDirectory\par
+References a directory location that is used during compilation of a dynamic resource. This class cannot be inherited.\par
+\par
+CompilationSection\par
+Defines configuration settings that are used to support the compilation infrastructure of Web applications. This class cannot be inherited.\par
+\par
+Compiler\par
+Defines a compiler that is used to support the compilation infrastructure of Web applications. This class cannot be inherited.\par
+\par
+CompilerCollection\par
+Represents a collection of Compiler objects. This class cannot be inherited.\par
+\par
+Converter\par
+Represents a configuration element in a configuration file.\par
+\par
+ConvertersCollection\par
+Represents a configuration collection that contains references to Converter objects.\par
+\par
+CustomError\par
+Configures a CustomError section to map an ASP.NET error code to a custom page. This class cannot be inherited.\par
+\par
+CustomErrorCollection\par
+Represents a collection of CustomError objects. This class cannot be inherited.\par
+\par
+CustomErrorsSection\par
+Configures the ASP.NET custom errors. This class cannot be inherited.\par
+\par
+DeploymentSection\par
+Defines a configuration setting that is typically used on a production server to override application-level settings that are appropriate only on development computers.\par
+\par
+EventMappingSettings\par
+Defines the ASP.NET event mapping settings for event providers. This class cannot be inherited.\par
+\par
+EventMappingSettingsCollection\par
+Provides a collection of EventMappingSettings objects. This class cannot be inherited.\par
+\par
+ExpressionBuilder\par
+Retrieves a dynamic resource during compilation.\par
+\par
+ExpressionBuilderCollection\par
+Represents a collection of ExpressionBuilder objects. This class cannot be inherited.\par
+\par
+FolderLevelBuildProvider\par
+Represents configuration settings that enable use of the BuildProvider class for specific folders.\par
+\par
+FolderLevelBuildProviderCollection\par
+Represents a collection of FolderLevelBuildProvider objects.\par
+\par
+FormsAuthenticationConfiguration\par
+Configures an ASP.NET application to use the AuthenticationMode forms modality.\par
+\par
+FormsAuthenticationCredentials\par
+Configures user credentials for ASP.NET applications that use form-based authentication.\par
+\par
+FormsAuthenticationUser\par
+Configures the user's credentials for Web applications that use forms-based authentication.\par
+\par
+FormsAuthenticationUserCollection\par
+Represents a collection of FormsAuthenticationUser objects. This class cannot be inherited.\par
+\par
+FullTrustAssembliesSection\par
+Configures a set of full-trust assemblies. This class cannot be inherited.\par
+\par
+FullTrustAssembly\par
+Configures a full trust assembly. This class cannot be inherited.\par
+\par
+FullTrustAssemblyCollection\par
+Represents a collection of FullTrustAssembly objects. This class cannot be inherited.\par
+\par
+GlobalizationSection\par
+Defines configuration settings that are used to support the globalization infrastructure of Web applications. This class cannot be inherited.\par
+\par
+HealthMonitoringSection\par
+Configures ASP.NET profiles that determine how health-monitoring events are sent to event providers. This class cannot be inherited.\par
+\par
+HostingEnvironmentSection\par
+Defines configuration settings that control the behavior of the application hosting environment. This class cannot be inherited.\par
+\par
+HttpCapabilitiesBase\par
+Provides access to detailed information about the capabilities of the client's browser.\par
+\par
+HttpCapabilitiesDefaultProvider\par
+The default extension of the HttpCapabilitiesProvider class that is included with ASP.NET.\par
+\par
+HttpCapabilitiesProvider\par
+Enables you to customize browser definitions. You can also customize the algorithm that identifies the browser based on information in the incoming HttpRequest.\par
+\par
+HttpCapabilitiesSectionHandler\par
+Assists in reading in the <browserCaps> section of a configuration file and creating an instance of the HttpBrowserCapabilities class that contains the capabilities information for the client browser.\par
+\par
+HttpConfigurationContext\par
+Supplies current context information to configuration-section handlers in ASP.NET applications.\par
+\par
+HttpCookiesSection\par
+Configures properties for cookies used by a Web application.\par
+\par
+HttpHandlerAction\par
+Configures an HttpHandlersSection configuration section. This class cannot be inherited.\par
+\par
+HttpHandlerActionCollection\par
+Represents a collection of HttpHandlerAction elements. This class cannot be inherited.\par
+\par
+HttpHandlersSection\par
+Configures an HTTP handler for a Web application. This class cannot be inherited.\par
+\par
+HttpModuleAction\par
+Configures the HttpModulesSection modules. This class cannot be inherited.\par
+\par
+HttpModuleActionCollection\par
+Represents a collection of HttpModuleAction objects. This class cannot be inherited.\par
+\par
+HttpModulesSection\par
+Configures an HTTP module for a Web application. This class cannot be inherited.\par
+\par
+HttpRuntimeSection\par
+Configures the ASP.NET HTTP runtime. This class cannot be inherited.\par
+\par
+IdentitySection\par
+Configures the identity of a Web application. This class cannot be inherited.\par
+\par
+IgnoreDeviceFilterElement\par
+Configures a device filter element.\par
+\par
+IgnoreDeviceFilterElementCollection\par
+Represents a collection of IgnoreDeviceFilterElement objects. This class cannot be inherited.\par
+\par
+LowerCaseStringConverter\par
+Provides support to convert an object to a lowercase string. This class cannot be inherited.\par
+\par
+MachineKeySection\par
+Defines the configuration settings that control the key generation and algorithms that are used in encryption, decryption, and message authentication code (MAC) operations in Windows Forms authentication, view-state validation, and session-state application isolation. This class cannot be inherited.\par
+\par
+MachineKeyValidationConverter\par
+Provides methods for converting MachineKeyValidation objects to and from strings.\par
+\par
+MembershipSection\par
+Defines configuration settings to support the infrastructure for configuring and managing membership details. This class cannot be inherited.\par
+\par
+NamespaceCollection\par
+Contains a collection of namespace objects. This class cannot be inherited.\par
+\par
+NamespaceInfo\par
+Contains a single configuration namespace reference, similar to the Import directive. This class cannot be inherited.\par
+\par
+OutputCacheProfile\par
+Configures the output cache profile that can be used by the application pages. This class cannot be inherited.\par
+\par
+OutputCacheProfileCollection\par
+Represents a collection of OutputCacheProfile objects. This class cannot be inherited.\par
+\par
+OutputCacheSection\par
+Configures the output cache for a Web application. This class cannot be inherited.\par
+\par
+OutputCacheSettingsSection\par
+Configures the output cache settings for application pages. This class cannot be inherited.\par
+\par
+PagesSection\par
+Provides programmatic access to the pages section of the configuration file. This class cannot be inherited.\par
+\par
+PartialTrustVisibleAssembliesSection\par
+Configures a set of partial-trust assemblies. This class cannot be inherited.\par
+\par
+PartialTrustVisibleAssembly\par
+Configures a partial-trust assembly. This class cannot be inherited.\par
+\par
+PartialTrustVisibleAssemblyCollection\par
+Represents a collection of PartialTrustVisibleAssembly objects. This class cannot be inherited.\par
+\par
+PassportAuthentication\par
+Configures Passport-based authentication in ASP.NET applications.\par
+\par
+ProcessModelSection\par
+Configures the ASP.NET process model settings on an Internet Information Services (IIS) Web server. This class cannot be inherited.\par
+\par
+ProfileGroupSettings\par
+Provides programmatic access to the group subsection of the profiles configuration file section.\par
+\par
+ProfileGroupSettingsCollection\par
+Contains a set of ProfileGroupSettings objects.\par
+\par
+ProfilePropertySettings\par
+The ProfilePropertySettings class provides a way to programmatically access and modify the profiles section of a configuration file. This class cannot be inherited.\par
+\par
+ProfilePropertySettingsCollection\par
+Contains a set of ProfilePropertySettingsCollection objects.\par
+\par
+ProfileSection\par
+The ProfileSection class provides a way to programmatically access and modify the profile section of a configuration file. This class cannot be inherited.\par
+\par
+ProfileSettings\par
+Configures the ASP.NET event profiles. This class cannot be inherited.\par
+\par
+ProfileSettingsCollection\par
+Contains a collection of ProfileSettings objects. This class cannot be inherited.\par
+\par
+ProtocolCollection\par
+Represents a configuration element that contains a collection of protocols.\par
+\par
+ProtocolElement\par
+Represents a protocol element in the Web services configuration file.\par
+\par
+ProtocolsConfigurationHandler\par
+Represents a configuration handler for protocols.\par
+\par
+ProtocolsSection\par
+Represents the protocols section of the Web configuration file.\par
+\par
+ProvidersHelper\par
+Provides methods for creating provider instances, either singly or in a batch.\par
+\par
+RegexWorker\par
+Used internally at run time by BrowserCapabilitiesFactory and BrowserCapabilitiesCodeGenerator to parse request data and identify the browser.\par
+\par
+RemoteWebConfigurationHostServer\par
+Used internally at run time to support accessing configuration data remotely.\par
+\par
+RoleManagerSection\par
+Defines configuration settings that are used to support the role management infrastructure of Web applications. This class cannot be inherited.\par
+\par
+RootProfilePropertySettingsCollection\par
+Acts as the top of a two-level named hierarchy of ProfilePropertySettingsCollection collections.\par
+\par
+RuleSettings\par
+Configures the ASP.NET event rules. This class cannot be inherited.\par
+\par
+RuleSettingsCollection\par
+A collection of RuleSettings objects. This class cannot be inherited.\par
+\par
+ScriptingAuthenticationServiceSection\par
+Represents the configuration section for authentication service settings. This class cannot be inherited.\par
+\par
+ScriptingJsonSerializationSection\par
+Represents a jsonSerialization configuration section in the scripting element of the configuration file. This class cannot be inherited.\par
+\par
+ScriptingProfileServiceSection\par
+Represents the configuration section for profile-service settings. This class cannot be inherited.\par
+\par
+ScriptingRoleServiceSection\par
+Represents the configuration section for role-service settings.\par
+\par
+ScriptingScriptResourceHandlerSection\par
+Represents a ScriptingScriptResourceHandler configuration section in the <scripting> element of the configuration file. This class cannot be inherited.\par
+\par
+ScriptingSectionGroup\par
+Represents the configuration section for scripting settings. This class cannot be inherited.\par
+\par
+ScriptingWebServicesSectionGroup\par
+Represents a group of related sections in a configuration file.\par
+\par
+SecurityPolicySection\par
+Defines configuration settings that are used to support the security infrastructure of a Web application. This class cannot be inherited.\par
+\par
+SessionPageStateSection\par
+Configures the sessionPageState section. This class cannot be inherited.\par
+\par
+SessionStateSection\par
+Configures the session state for a Web application.\par
+\par
+SiteMapSection\par
+Defines configuration settings that are used to support the infrastructure for configuring, storing, and rendering site navigation. This class cannot be inherited.\par
+\par
+SqlCacheDependencyDatabase\par
+Configures the SQL cache dependencies databases for an ASP.NET application. This class cannot be inherited.\par
+\par
+SqlCacheDependencyDatabaseCollection\par
+Represents a collection of SqlCacheDependencyDatabase objects. This class cannot be inherited.\par
+\par
+SqlCacheDependencySection\par
+Configures the SQL cache dependencies for an ASP.NET application. This class cannot be inherited.\par
+\par
+SystemWebCachingSectionGroup\par
+Configures the caching group within a configuration file. This class cannot be inherited.\par
+\par
+SystemWebExtensionsSectionGroup\par
+Represents a group of related sections in a configuration file. This class cannot be inherited.\par
+\par
+SystemWebSectionGroup\par
+Allows the user to programmatically access the system.web group of the configuration file. This class cannot be inherited.\par
+\par
+TagMapCollection\par
+Contains a collection of TagMapInfo objects.\par
+\par
+TagMapInfo\par
+Contains a single configuration tag remapping statement. This class cannot be inherited.\par
+\par
+TagPrefixCollection\par
+Contains a collection of TagPrefixInfo objects.\par
+\par
+TagPrefixInfo\par
+Defines a configuration element containing tag-related information.\par
+\par
+TraceSection\par
+Configures the ASP.NET trace service. This class cannot be inherited.\par
+\par
+TransformerInfo\par
+Specifies a custom class that extends the WebPartTransformer class for use by Web Part connections.\par
+\par
+TransformerInfoCollection\par
+Contains a collection of TransformerInfo objects. This class cannot be inherited.\par
+\par
+TrustLevel\par
+Defines the mapping of specific security levels to named policy files. This class cannot be inherited.\par
+\par
+TrustLevelCollection\par
+Contains a collection of TrustLevel objects. This class cannot be inherited.\par
+\par
+TrustSection\par
+Configures the code-access security level that is applied to an application. This class cannot be inherited.\par
+\par
+UrlMapping\par
+Maps a URL that is displayed to users to the URL of a page in your Web application. This class cannot be inherited.\par
+\par
+UrlMappingCollection\par
+Represents a collection of UrlMapping objects. This class cannot be inherited.\par
+\par
+UrlMappingsSection\par
+Provides programmatic access to the urlMappings configuration section. This class cannot be inherited.\par
+\par
+UserMapPath\par
+Maps configuration file virtual paths to physical paths.\par
+\par
+VirtualDirectoryMapping\par
+Specifies a custom virtual-directory hierarchy for a Web application. This class cannot be inherited.\par
+\par
+VirtualDirectoryMappingCollection\par
+Contains a collection of VirtualDirectoryMapping objects. This class cannot be inherited.\par
+\par
+WebConfigurationFileMap\par
+Defines the configuration file mappings for a Web application. This class cannot be inherited.\par
+\par
+WebConfigurationManager\par
+Provides access to configuration files as they apply to Web applications.\par
+\par
+WebContext\par
+Manages the path context for the current Web application. This class cannot be inherited.\par
+\par
+WebControlsSection\par
+Configures the webControls section. This class cannot be inherited.\par
+\par
+WebPartsPersonalization\par
+Allows you to specify the personalization provider and set personalization authorizations. This class cannot be inherited.\par
+\par
+WebPartsPersonalizationAuthorization\par
+Provides programmatic access to the authorization section contained in the webParts section of the configuration. This class cannot be inherited.\par
+\par
+WebPartsSection\par
+Provides programmatic access to the webParts configuration file section. This class cannot be inherited.\par
+\par
+XhtmlConformanceSection\par
+Configures the xhtmlConformance section. This class cannot be inherited.\par
+\par
+\par
+Methods\par
+METHODS\par
+GetSection(String)\par
+Retrieves the specified configuration section from the current Web application's configuration file.\par
+\par
+GetSection(String, String)\par
+Retrieves the specified configuration section from the Web application's configuration file at the specified location.\par
+\par
+GetWebApplicationSection(String)\par
+Retrieves the specified configuration section from the current Web application's configuration file.\par
+\par
+OpenMachineConfiguration()\par
+Opens the machine-configuration file on the current computer as a Configuration object to allow read or write operations.\par
+\par
+OpenMachineConfiguration(String)\par
+Opens the machine-configuration file on the current computer as a Configuration object to allow read or write operations.\par
+\par
+OpenMachineConfiguration(String, String)\par
+Opens the specified machine-configuration file on the specified server as a Configuration object to allow read or write operations.\par
+\par
+OpenMachineConfiguration(String, String, IntPtr)\par
+Opens the specified machine-configuration file on the specified server as a Configuration object, using the specified security context to allow read or write operations.\par
+\par
+OpenMachineConfiguration(String, String, String, String)\par
+Opens the specified machine-configuration file on the specified server as a Configuration object, using the specified security context to allow read or write operations.\par
+\par
+OpenMappedMachineConfiguration(ConfigurationFileMap)\par
+Opens the machine-configuration file as a Configuration object, using the specified file mapping to allow read or write operations.\par
+\par
+OpenMappedMachineConfiguration(ConfigurationFileMap, String)\par
+Opens the machine-configuration file as a Configuration object using the specified file mapping and location to allow read or write operations.\par
+\par
+OpenMappedWebConfiguration(WebConfigurationFileMap, String)\par
+Opens the specified Web-application configuration file as a Configuration object using the specified file mapping and virtual path to allow read or write operations.\par
+\par
+OpenMappedWebConfiguration(WebConfigurationFileMap, String, String)\par
+Opens the specified Web application configuration file as a Configuration object using the specified file mapping, virtual path, and site name to allow read or write operations.\par
+\par
+OpenMappedWebConfiguration(WebConfigurationFileMap, String, String, String)\par
+Opens the specified Web-application configuration file as a Configuration object using the specified file mapping, virtual path, site name, and location to allow read or write operations.\par
+\par
+OpenWebConfiguration(String)\par
+Opens the Web-application configuration file as a Configuration object using the specified virtual path to allow read or write operations.\par
+\par
+OpenWebConfiguration(String, String)\par
+Opens the Web-application configuration file as a Configuration object using the specified virtual path and site name to allow read or write operations.\par
+\par
+OpenWebConfiguration(String, String, String)\par
+Opens the Web-application configuration file as a Configuration object using the specified virtual path, site name, and location to allow read or write operations.\par
+\par
+OpenWebConfiguration(String, String, String, String)\par
+Opens the Web-application configuration file as a Configuration object using the specified virtual path, site name, location, and server to allow read or write operations.\par
+\par
+OpenWebConfiguration(String, String, String, String, IntPtr)\par
+Opens the Web-application configuration file as a Configuration object using the specified virtual path, site name, location, server, and security context to allow read or write operations.\par
+\par
+OpenWebConfiguration(String, String, String, String, String, String)\par
+Opens the Web-application configuration file as a Configuration object using the specified virtual path, site name, location, server, and security context to allow read or write operations.\par
+ \par
+
+\pard\sa200\sl276\slmult1\par
+}
+ 
